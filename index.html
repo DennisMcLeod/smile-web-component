@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rating Web Component</title>
+  </head>
+  <body>
+    <smile-rating></smile-rating>
+    <script src="./SmileRating.js"></script>
+
+    <div class="results"></div>
+
+    <script>
+      const rating = document.querySelector('smile-rating');
+      const results = document.querySelector('.results');
+
+      rating.addEventListener('change', () => {
+        results.innerHTML = `You rated this ${rating.value}`;
+      });
+    </script>
+  </body>
+</html>
